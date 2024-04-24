@@ -48,13 +48,10 @@ local Sampledata = { -- Datastore system assistance
 }
 
 local towerFolders = { -- Store list of tower folders to simplify naming
-	[1] = towers.Tower1_Sumatera;
-	[2] = towers.Tower2_Jawa;
-	[3] = towers.Tower3_Kalimantan;
-	[4] = towers.Tower4_Sulawesi;
-	[5] = towers.Tower5_BaliNT;
-	[6] = towers.Tower6_Maluku;
-	[7] = towers.Tower7_Papua;
+	[1] = towers.Tower1_One;
+	[2] = towers.Tower2_Two;
+	[3] = towers.Tower3_Three;
+	[4] = towers.Tower4_Four;
 }
 
 type TowerDataType = {
@@ -71,240 +68,23 @@ type TowerDataType = {
 
 local TowerData = { -- Store list of tower data
 	[1] = {
-		Name = "Sumatera";
-		MinimumTime = 105;
+		Name = "One";
+		MinimumTime = 60;
 		AutokickMinimumTime = 50;
 		MinimumCoiledTime = 10;
-		BadgeID = 2152640096;
-		Coins = 300;
-		WinPad = towerFolders[1].Sumatra.Win.PortalBack.Portal;
+		BadgeID = 00000000000;
+		Coins = 100;
+		WinPad = towerFolders[1].WinPad;
 		Stages = {
 			[1] = {
-				Name = "Aceh";
-				Part = towerFolders[1].Sumatra.Checkpoint1.CheckPoint.PartTrigger;	
+				Name = "Northern";
+				Part = towerFolders[1].One.Checkpoint1.CheckPoint.PartTrigger;	
 			};
 			[2] = {
-				Name = "Sumatera Utara";
-				Part = towerFolders[1].Sumatra.Checkpoint2.CheckPoint.PartTrigger;	
-			};
-			[3] = {
-				Name = "Sumatera Barat";
-				Part = towerFolders[1].Sumatra.Checkpoint3.CheckPoint.PartTrigger;	
-			};
-			[4] = {
-				Name = "Riau";
-				Part = towerFolders[1].Sumatra.Checkpoint4.CheckPoint.PartTrigger;	
-			};
-			[5] = {
-				Name = "Jambi";
-				Part = towerFolders[1].Sumatra.Checkpoint5.CheckPoint.PartTrigger;	
-			};
-			[6] = {
-				Name = "Sumatera Selatan";
-				Part = towerFolders[1].Sumatra.Checkpoint6.CheckPoint.PartTrigger;	
-			};
-			[7] = {
-				Name = "Bengkulu";
-				Part = towerFolders[1].Sumatra.Checkpoint7.CheckPoint.PartTrigger;	
-			};
-			[8] = {
-				Name = "Lampung";
-				Part = towerFolders[1].Sumatra.Checkpoint8.CheckPoint.PartTrigger;	
-			};
-			[9] = {
-				Name = "Kepulauan Bangka-Belitung";
-				Part = towerFolders[1].Sumatra.Checkpoint9.CheckPoint.PartTrigger;	
-			};
-			[10] = {
-				Name = "Kepulauan Riau";
-				Part = towerFolders[1].Sumatra.Checkpoint10.CheckPoint.PartTrigger;	
+				Name = "Southern";
+				Part = towerFolders[1].One.Checkpoint2.CheckPoint.PartTrigger;	
 			};
 		}
-	};
-	[2] = {
-		Name = "Jawa";
-		MinimumTime = 65;
-		AutokickMinimumTime = 20;
-		MinimumCoiledTime = 8;
-		BadgeID = 2152640128;
-		Coins = 200;
-		WinPad = towerFolders[2].Java.Win.PortalBack.Portal;
-		Stages = {
-			[1] = {
-				Name = "Banten";
-				Part = towerFolders[2].Java.Checkpoint1.CheckPoint.PartTrigger;	
-			};
-			[2] = {
-				Name = "DKI Jakarta";
-				Part = towerFolders[2].Java.Checkpoint2.CheckPoint.PartTrigger;	
-			};
-			[3] = {
-				Name = "Jawa Barat";
-				Part = towerFolders[2].Java.Checkpoint3.CheckPoint.PartTrigger;	
-			};
-			[4] = {
-				Name = "Jawa Tengah";
-				Part = towerFolders[2].Java.Checkpoint4.CheckPoint.PartTrigger;	
-			};
-			[5] = {
-				Name = "Daerah Istimewa Yogyakarta";
-				Part = towerFolders[2].Java.Checkpoint5.CheckPoint.PartTrigger;	
-			};
-			[6] = {
-				Name = "Jawa Timur";
-				Part = towerFolders[2].Java.Checkpoint6.CheckPoint.PartTrigger;	
-			};
-		}
-	};
-	[3] = {
-		Name = "Kalimantan";
-		MinimumTime = 35;
-		AutokickMinimumTime = 20;
-		MinimumCoiledTime = 8;
-		BadgeID = 2152640141;
-		Coins = 220;
-		WinPad = towerFolders[3].Borneo.Win.PortalBack.Portal;
-		Stages = {
-			[1] = {
-				Name = "Kalimantan Barat";
-				Part = towerFolders[3].Borneo.Checkpoint1.CheckPoint.PartTrigger;	
-			};
-			[2] = {
-				Name = "Kalimantan Tengah";
-				Part = towerFolders[3].Borneo.Checkpoint2.CheckPoint.PartTrigger;	
-			};
-			[3] = {
-				Name = "Kalimantan Selatan";
-				Part = towerFolders[3].Borneo.Checkpoint3.CheckPoint.PartTrigger;	
-			};
-			[4] = {
-				Name = "Kalimantan Timur";
-				Part = towerFolders[3].Borneo.Checkpoint4.CheckPoint.PartTrigger;	
-			};
-			[5] = {
-				Name = "Kalimantan Utara";
-				Part = towerFolders[3].Borneo.Checkpoint5.CheckPoint.PartTrigger;	
-			};
-		}
-	};
-	[4] = {
-		Name = "Sulawesi";
-		MinimumTime = 35;
-		AutokickMinimumTime = 20;
-		MinimumCoiledTime = 8;
-		BadgeID = 2152640156;
-		Coins = 250;
-		WinPad = towerFolders[4].Sulawesi.Win.PortalBack.Portal;
-		Stages = {
-			[1] = {
-				Name = "Sulawesi Utara";
-				Part = towerFolders[4].Sulawesi.Checkpoint1.CheckPoint.PartTrigger;	
-			};
-			[2] = {
-				Name = "Sulawesi Tengah";
-				Part = towerFolders[4].Sulawesi.Checkpoint2.CheckPoint.PartTrigger;	
-			};
-			[3] = {
-				Name = "Sulawesi Selatan";
-				Part = towerFolders[4].Sulawesi.Checkpoint3.CheckPoint.PartTrigger;	
-			};
-			[4] = {
-				Name = "Sulawesi Tenggara";
-				Part = towerFolders[4].Sulawesi.Checkpoint4.CheckPoint.PartTrigger;	
-			};
-			[5] = {
-				Name = "Gorontalo";
-				Part = towerFolders[4].Sulawesi.Checkpoint5.CheckPoint.PartTrigger;	
-			};
-			[6] = {
-				Name = "Sulawesi Barat";
-				Part = towerFolders[4].Sulawesi.Checkpoint6.CheckPoint.PartTrigger;	
-			};
-		}
-	};
-	[5] = {
-		Name = "BaliNTT";
-		MinimumTime = 25;
-		AutokickMinimumTime = 10;
-		MinimumCoiledTime = 8;
-		BadgeID = 2152640171;
-		Coins = 220;
-		WinPad = towerFolders[5].BaliNttNtb.Win.PortalBack.Portal;
-		Stages = {
-			[1] = {
-				Name = "Bali";
-				Part = towerFolders[5].BaliNttNtb.Checkpoint1.CheckPoint.PartTrigger;	
-			};
-			[2] = {
-				Name = "Nusa Tenggara Barat";
-				Part = towerFolders[5].BaliNttNtb.Checkpoint2.CheckPoint.PartTrigger;	
-			};
-			[3] = {
-				Name = "Nusa Tenggara Timur";
-				Part = towerFolders[5].BaliNttNtb.Checkpoint3.CheckPoint.PartTrigger;	
-			};
-		};
-	};
-	[6] = {
-		Name = "Maluku";
-		MinimumTime = 32;
-		AutokickMinimumTime = 26;
-		MinimumCoiledTime = 6;
-		BadgeID = 2152907063;
-		Coins = 400;
-		WinPad = towerFolders[6].Maluku.Win.PortalBack.Portal;
-		WinFunction = function(player:Player)
-		
-		end;
-		Stages = {
-			[1] = {
-				Name = "Maluku";
-				Part = towerFolders[6].Maluku.Checkpoint1.CheckPoint.PartTrigger;	
-			};
-			[2] = {
-				Name = "Maluku Utara";
-				Part = towerFolders[6].Maluku.Checkpoint2.CheckPoint.PartTrigger;	
-			};
-		};
-	};
-	[7] = {
-		Name = "Papua";
-		MinimumTime = 14;
-		AutokickMinimumTime = 8;
-		MinimumCoiledTime = 8;
-		BadgeID = 2152907069;
-		Coins = 600;
-		WinPad = towerFolders[7].Papua.Win.PortalBack.Portal;
-		WinFunction = function(player:Player)
-
-		end;
-
-		Stages = {
-			[1] = {
-				Name = "Papua Barat";
-				Part = towerFolders[7].Papua.Checkpoint1.CheckPoint.PartTrigger;	
-			};
-			[2] = {
-				Name = "Papua";
-				Part = towerFolders[7].Papua.Checkpoint2.CheckPoint.PartTrigger;	
-			};
-			[3] = {
-				Name = "Papua Tengah";
-				Part = towerFolders[7].Papua.Checkpoint3.CheckPoint.PartTrigger;	
-			};
-			[4] = {
-				Name = "Papua Pegunungan";
-				Part = towerFolders[7].Papua.Checkpoint4.CheckPoint.PartTrigger;	
-			};
-			[5] = {
-				Name = "Papua Selatan";
-				Part = towerFolders[7].Papua.Checkpoint5.CheckPoint.PartTrigger;	
-			};
-			[6] = {
-				Name = "Papua Barat Daya";
-				Part = towerFolders[7].Papua.Checkpoint6.CheckPoint.PartTrigger;	
-			};
-		};
 	};
 	
 	
@@ -330,8 +110,8 @@ local SampleAECheckPointsMetadata = {
 		[51] = false;
 	};	-- User ID goes here
 	TowerID = 0;
-	Part = workspace.IndonesiaIsland; -- just a random part for sample, not going to be used
-	OriginalPath = "workspace.IndonesiaIsland";
+	Part = workspace.Baseplate; -- just a random part for sample, not going to be used
+	OriginalPath = "workspace.Baseplate";
 	ObfusPath = "workspace.Part.X";
 }
 
